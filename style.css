@@ -31,22 +31,24 @@ body {
     width: 100%;
     height: 40px;
     background-color: darkgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #tabs-top a {
-    float: left;
+    flex: 1;
+    text-align: center;
     display: block;
-    width: 33.33%;
-    height: 35px;
     font-weight: 700;
     color: white;
-    text-align: center;
     text-decoration: none;
     padding-top: 12px;
+    height: 35px;
 }
 
 /*==============main-home================*/
 #main-home {
-    margin: 120px 0 0 0;
+    margin-top: 120px;
 }
 
 /*==============tabs-bottom================*/
@@ -58,17 +60,19 @@ body {
     width: 100%;
     height: 40px;
     background-color: forestgreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #tabs-buttom a {
-    float: left;
+    flex: 1;
+    text-align: center;
     display: block;
-    width: 50%;
-    height: 35px;
     font-weight: 700;
     color: white;
-    text-align: center;
     text-decoration: none;
     padding-top: 12px;
+    height: 35px;
 }
 
 /*==============main================*/
@@ -81,13 +85,13 @@ body {
 /*==============content================*/
 #content {
     padding-top: 1px;
-    padding-bottom: 50px;
+    padding-bottom: 100px; /* Added to give space above the bottom tabs */
 }
 
 /*==============info-box================*/
 a.info-box {
     text-decoration: none;
-    background: lch(99.88% 2.52 109.96 / 0.8);
+    background: rgba(255, 255, 255, 0.9);
     width: 90%;
     height: 90px;
     display: block;
@@ -118,52 +122,52 @@ a.info-box {
 }
 
 /*==============info-box-full================*/
-#info-box-full{
+#info-box-full {
     background: hwb(0 91% 9%);
     width: 90%;
     display: block;
     margin: auto;
     margin-top: 12px;
     padding: 10px;
-}
-#info-box-full img{
-    width: 100%;
-}
-#info-box-full{
     text-align: center;
 }
+#info-box-full img {
+    width: 100%;
+}
+
 /*==============weather================*/
-img.info-box-weather-icon{
+img.info-box-weather-icon {
     height: 30px;
     width: 30px !important;
     margin: 10px;
     float: left;
 }
-h1.info-box-weather-icon{
+h1.info-box-weather-icon {
     font-size: 65px;
     font-weight: 200;
     margin: 0;
 }
-table{
-    width: 100%
+table {
+    width: 100%;
 }
-td{
+td {
     border-top: 1px solid #131313;
 }
+
 /*==============feedback================*/
-input{
+input {
     width: 100%;
     height: 25px;
     margin: 12px 0;
     border: 1px solid #929292;
 }
-textarea{
+textarea {
     width: 100%;
     height: 70px;
     margin: 12px 0;
     border: 1px solid #929292;
 }
-.button{
+.button {
     display: block;
     width: 100%;
     background-color: forestgreen;
@@ -181,11 +185,43 @@ textarea{
     cursor: pointer;
     appearance: none;
 }
-.button:hover{
+.button:hover {
     background-color: #3eaf3e;
     color: white;
 }
-.button:active{
-    background-color: scale(o.98);
+.button:active {
+    background-color: #2e8b2e;
     box-shadow: 0 0 3px #000;
+}
+
+/*==============responsive================*/
+#map {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    #tabs-top a, #tabs-buttom a {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+    #logo {
+        width: 120px;
+        height: auto;
+    }
+    .info-box {
+        height: auto;
+        padding: 10px;
+    }
+    .info-box img {
+        height: 50px;
+        margin: 5px;
+    }
+    .info-box h3, .info-box p {
+        font-size: 14px;
+    }
+    .button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
